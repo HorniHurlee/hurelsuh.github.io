@@ -1,0 +1,36 @@
+body {
+    background-color: white;
+  }
+h1 {
+    color: blue;
+  }
+p {
+    color: white;
+  }
+h2{
+    color: white;
+}
+.header{
+    height: 50px;
+    background-color: #352BA5;
+    text-align: center;
+}
+.header2{
+    height: 200px;
+    background-color: #13124f;
+    text-align: left;
+}
+.headper h2, .header2 p{
+    margin-left: 20px;
+}
+.button{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    color: white;
+}
+.header3{
+    margin-top: 50px;
+    margin-left: 30px;
+    color: hotpink;
+}
