@@ -1,36 +1,204 @@
 body {
-    background-color: white;
-  }
-h1 {
-    color: blue;
-  }
-p {
-    color: white;
-  }
-h2{
-    color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
-.header{
-    height: 50px;
+
+.header {
+    background-color: #13124F;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.jumbotron {
+    background-color: #13124F;
+    color: white;
+    padding: 60px 20px;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #F61067;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main {
+    padding-right: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.messages {
+    background-color: #F61067;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-box {
+    background-color: #9090A5;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.input-box {
     background-color: #352BA5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.send-btn {
+    background-color: #F61067;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.note {
+    font-size: 12px;
     text-align: center;
 }
-.header2{
-    height: 200px;
-    background-color: #13124f;
-    text-align: left;
+
+.vote-box {
+    background-color: white;
+    border: 1px solid #9090A5;
+    padding: 20px;
 }
-.headper h2, .header2 p{
-    margin-left: 20px;
+
+.progress-bar {
+    background-color: #F61067;
+    height: 20px;
+    width: 70%;
+    margin-bottom: 10px;
 }
-.button{
-    height: 50px;
-    width: 150px;
-    text-align: center;
+
+.vote-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.vote-btn {
+    padding: 10px;
+    border: none;
+}
+
+.cool-btn {
+    background-color: #F61067;
     color: white;
 }
-.header3{
-    margin-top: 50px;
-    margin-left: 30px;
-    color: hotpink;
+
+.lame-btn {
+    background-color: white;
+    border: 1px solid #2AD392;
+    color: #2AD392;
+}
+
+.footer {
+    background-color: #13124F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.alert {
+    background-color: #9090A5;
+    padding: 10px;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding-right: 0;
+    }
+
+    .jumbotron h1 {
+        font-size: 32px;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+    }
+
+    .vote-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding-right: 0;
+    }
+
+    .jumbotron h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
