@@ -1,93 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>
-        Laboratory 2
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Based thing</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
         table {
             width: 100%;
-            table-layout: fixed;
+            height: 100%;
             border-collapse: collapse;
         }
-        th:first-child, td:first-child {
-            width: 20%;
-        }
-        th:last-child, td:last-child {
-            width: 80%; 
-        }
-
-        th, td {
+        td {
+            border: 1px solid black;
             text-align: center;
-            padding: 10px; 
+            vertical-align: middle;
         }
-        
-       
-        button {
-            width: 100%; 
-            padding: 10px; 
+        .title-bar {
+            height: 10%;
+        }
+        .left-bar {
+            width: 20%;
+            vertical-align: top;
+            text-align: left;
+            text-align: center;
+            vertical-align: top;
+            padding-left: 10px;
+        }
+        .main {
+            width: 80%;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .buton{
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
-    <h1>
-        Laboratory 2
-    </h1>
-    <h2>
-        <a href="./lab2.html">Home</a>
-    </h2>
-    <table border="1">
-        <caption>Little few informations about me!</caption>
-        <thead>
-            <tr>
-                <th>
-                    Jump to
-                </th>
-                <th>
-                    Detailed info
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <a href="./lab2_sub/lab2_1.html" >
-                        <button>Personal Info</button>
-                    </a>
-                </td>
-                <td rowspan="5">
-                    <img src="./images/new_frontiers_trailer_poster.jpg" alt = "banner" width = "450">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./lab2_sub/lab2_2.html" >
-                        <button>My Hobbies</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./lab2_sub/lab2_3.html" >
-                        <button>Favorite Websites</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./lab2_sub/lab2_4.html" >
-                        <button>Contact Me!</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./lab2_sub/lab2_5.html" >
-                        <button>My family and friends</button>
-                    </a>
-                </td>
-            </tr>
-        </tbody>
+    <table>
+        <tr>
+            <td colspan="2" class="title-bar"><a href="./lab2real.html">Home</a></td>
+        </tr>
+        <tr>
+            <td class="left-bar">  
+                <a href="./lab2_sub/lab2_1.html"><button class="buton">Personal Info</button></a><br>
+                <a href="./lab2_sub/lab2_2.html"><button class="buton">My Hobbies</button></a><br>
+                <a href="./lab2_sub/lab2_3.html"><button class="buton">Favorite Websites</button></a><br>
+                <a href="./lab2_sub/lab2_4.html"><button class="buton">Contact Me!</button></a><br>
+                <a href="./lab2_sub/lab2_5.html"><button class="buton">Family and friends</button></a><br>
+            </td>
+            <td class="main">
+                <p>Boring blank plain main page</p>
+            </td>
+        </tr>
     </table>
 </body>
 </html>

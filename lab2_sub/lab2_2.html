@@ -1,115 +1,83 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>
-        Laboratory 2
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Based thing</title>
     <style>
-        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
         table {
             width: 100%;
-            table-layout: fixed;
-            border-collapse: collapse; 
+            height: 100%;
+            border-collapse: collapse;
         }
-        th:first-child, td:first-child {
-            width: 20%; 
-        }
-        th:last-child, td:last-child {
-            width: 80%; 
-        }
-
-        
-        th, td {
+        td {
+            border: 1px solid black;
             text-align: center;
-            padding: 10px; 
+            vertical-align: middle;
         }
-
-        button {
-            width: 100%; 
-            padding: 10px; 
+        .title-bar {
+            height: 20%;
+        }
+        .left-bar {
+            width: 20%;
+            vertical-align: top;
+            text-align: left;
+            text-align: center;
+            vertical-align: top;
+            padding-left: 10px;
+        }
+        .main {
+            width: 80%;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .buton{
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
-    <h1>
-        Laboratory 2
-    </h1>
-    <h2>
-        <a href="../lab2.html">Home</a>
-    </h2>
-    <table border="1">
-        <caption>Little few informations about me!</caption>
-        <thead>
-            <tr>
-                <th>
-                    Jump to
-                </th>
-                <th>
-                    Detailed info
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <a href="lab2_1.html" >
-                        <button>Personal Info</button>
-                    </a>
-                </td>
-                <td rowspan="5">
-                    <body>
-        <h2>My skills</h2>  
-<p>
-    I am very eager to learn about graphic designing, coding, making connecting things. <br /> 
-    Since 2019 I started to learn and work on Adobe products that include Adobe Photoshop, <br />
-     Adobe After Effects, Adobe Premiere Pro. <br />
-     Even with 5 years of using these softwares, I'm still at the learning stage. The learning curve is so deep.    <br />
-     Here are one of each of my works:
-</p>
-<h3>Photoshop</h3> 
-<img src="../images/M4.png" alt="BMW M4 Poster" width="600" />
-<br />
-<h3>After Effects</h3>
-<a href="https://www.facebook.com/share/v/RsVDYXNqRSfZWYjo/?mibextid=KsPBc6">Lyric Video</a>
-<br />
-<h3>Premiere Pro</h3>
-<a href="https://www.facebook.com/share/v/HXvGUAcZGEAet5oW/?mibextid=KsPBc6">But every lyric is google image</a>
-<br />
-<h3>Blender</h3>
-<img src="../images/donut.jpg" alt="Donut" width="400" />
-<br />
-    </body>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="lab2_2.html" >
-                        <button>My Hobbies</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="lab2_3.html" >
-                        <button>Favorite Websites</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="lab2_4.html" >
-                        <button>Contact Me!</button>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="lab2_5.html" >
-                        <button>My family and friends</button>
-                    </a>
-                </td>
-            </tr>
-        </tbody>
+    <table>
+        <tr>
+            <td colspan="2" class="title-bar" style="height: 65px;"><a href="../lab2real.html">Home</a></td>
+        </tr>
+        <tr>
+            <td class="left-bar">
+                <a href="./lab2_1.html"><button class="buton">Personal Info</button></a><br>
+                <a href="./lab2_2.html"><button class="buton">My Hobbies</button></a><br>
+                <a href="./lab2_3.html"><button class="buton">Favorite Websites</button></a><br>
+                <a href="./lab2_4.html"><button class="buton">Contact Me!</button></a><br>
+                <a href="./lab2_5.html"><button class="buton">Family and friends</button></a><br>
+            </td>
+            <td class="main">
+                <h2>My skills</h2>  
+                <p>
+                    I am very eager to learn about graphic designing, coding, making connecting things. <br /> 
+                    Since 2019 I started to learn and work on Adobe products that include Adobe Photoshop, <br />
+                     Adobe After Effects, Adobe Premiere Pro. <br />
+                     Even with 5 years of using these softwares, I'm still at the learning stage. The learning curve is so deep.    <br />
+                     Here are one of each of my works:
+                </p>
+                <h3>Photoshop</h3> 
+                <img src="../images/M4.png" alt="BMW M4 Poster" width="600" />
+                <br />
+                <h3>After Effects</h3>
+                <a href="https://www.facebook.com/share/v/RsVDYXNqRSfZWYjo/?mibextid=KsPBc6">Lyric Video</a>
+                <br />
+                <h3>Premiere Pro</h3>
+                <a href="https://www.facebook.com/share/v/HXvGUAcZGEAet5oW/?mibextid=KsPBc6">But every lyric is google image</a>
+                <br />
+                <h3>Blender</h3>
+                <img src="../images/donut.jpg" alt="Donut" width="400" />
+                <br />
+            </td>
+        </tr>
     </table>
 </body>
 </html>
