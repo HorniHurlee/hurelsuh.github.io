@@ -1,12 +1,66 @@
+var tempNumber = 0;
+var placeHolder = 0;
+var x = 0;
+var output = document.getElementById("output");
 var input = prompt("Enter Number"); 
-var cp = input.split('').reverse().join(''); 
-var output = document.getElementById("output"); 
-    if (input == cp) { 
-        output.innerHTML = `${input} is a palindrome`; 
-    } 
-    else { 
-        output.innerHTML = `${input} is not a palindrome`;
-    }
+input = parseInt(input);
+while(input > 10){
+    placeHolder = placeHolder + (input % 10);
+    input = parseInt(input / 10);
+}
+placeHolder = placeHolder + (input % 10);
+tempNumber = placeHolder;
+var reversedNum = 0;
+
+while(tempNumber != 0){
+    x = tempNumber % 10;
+    reversedNum = (reversedNum * 10) + x;
+    tempNumber = parseInt(tempNumber / 10);
+}
+if (placeHolder == reversedNum){
+    output.innerHTML = `${placeHolder} is a palindrome`; 
+}
+else{
+    output.innerHTML = `${placeHolder} is not a palindrome`;
+}
+
+
+// var numbers = [1, 2, 3, 4, 5];
+// var i = 0;
+// var max = 0;
+// var output = document.getElementById("output");
+// while (i <= 1){
+//     if(max < numbers[i]){
+//         max = numbers[i];
+//     }
+//     i++;
+// }
+// var temp = 1;
+// while(true){
+//     if((max % numbers[0] == 0) && (max % numbers[1] == 0) && (max % numbers[2] == 0) && (max % numbers[3] == 0) && (max % numbers[4] == 0)){
+//         output.innerHTML = `${max} is the LCM`;
+//         break;
+//     }
+
+//     else{
+//         max += 1;
+//     }
+//     console.log(max);
+// }
+
+
+
+
+
+
+// var output = document.getElementById("output"); 
+//     if (input == cp) { 
+//         output.innerHTML = `${input} is a palindrome`; 
+//     } 
+//     else { 
+//         output.innerHTML = `${input} is not a palindrome`;
+//     }
+/*
 var output2 = document.getElementById("output2");
 var rabbit = 18;
 rabbit = parseInt(rabbit);
@@ -74,3 +128,4 @@ else{
     input = Math.sqrt(input);
     output5.innerHTML = `Nighttime. ${input}`;
 }
+    */

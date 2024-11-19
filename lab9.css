@@ -1,0 +1,15 @@
+.keyboard{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+}
+.lives{
+    color: White;
+}
