@@ -3,167 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMW Homepage</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 50px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header img {
-            width: 60px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-        }
-        .hero {
-            background-image: url('./images/25x5-00-teaser-hd.webp'); /* Replace with actual image */
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        .hero-content {
-            color: white;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            margin-top: 350px;
-            margin-right: 500px;
-            padding-top: 20px;
-        }
-        .hero h1 {
-            font-size: 48px;
-        }
-        .hero button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .content-sections {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 20px;
-        }
-        .section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 48%;
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-            min-height: 300px;
-            position: relative;
-            color: white; /* Default text color */
-        }
-        .section img {
-            width: 100%;
-            height: auto;
-        }
-        .section h2 {
-            font-size: 24px;
-            margin: 20px 0;
-        }
-        .section a {
-            position: absolute;
-            bottom: 10px; /* Adjust as needed */
-            left: 10px;   /* Adjust as needed */
-            padding: 10px 20px;
-            background-color: #000;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        footer {
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <title>HTML Template with Slots</title>
 </head>
 <body>
 
-    <header>
-        <img src="./images/BMW-logo.png" alt="BMW Logo"> 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Circular World</a>
-            <a href="#">Digital Journey</a>
-            <a href="#">Electric Future</a>
-            <a href="#">Freude</a>
-            <a href="#">Models</a>
-        </nav>
-    </header>
-
-    <div class="hero">
-        <div class="hero-content">
-            <h1>The BMW X5 through the ages</h1>
-            <button>Read more</button>
+    <!-- Define the template -->
+    <template id="my-template">
+        <style>
+            .content {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px 0;
+            }
+        </style>
+        <div class="content">
+            <slot name="title"></slot>
+            <slot name="description"></slot>
         </div>
-    </div>
+    </template>
 
-    <div class="content-sections">
-        <!-- Section 1 -->
-        <div class="section" style="background-image: url('./images/macro-mineral-stone-rhinestone-rock-crystal-black-background_254845-7723.jpg');">
-            <h2>An audio series... about those who change the world around them</h2>
-            <a href="#">Read more</a>
-        </div>
+    <!-- Where the content will be inserted -->
+    <div id="content-area"></div>
 
-        <!-- Section 2 -->
-        <div class="section" style="background-image: url('./images/bmw-erlkoenige-00-teaser-square.webp');">
-            <h2>The art of deception</h2>
-            <a href="#">Read more</a>
-        </div>
+    <script>
+        // Fetch the template
+        const template = document.getElementById('my-template').content;
 
-        <!-- Section 3 -->
-        <div class="section" style="background-image: url('./images/n-10-media-hd.webp');">
-            <h2>Learn everything about BMW here</h2>
-            <a href="#">BMW News</a>
-        </div>
+        // Create a clone of the template
+        const clone = document.importNode(template, true);
 
-        <!-- Section 4 -->
-        <div class="section" style="background-image: url('./images/n-07-media-hd.webp');">
-            <h2>Rocket League</h2>
-            <a href="#">Read more</a>
-        </div>
+        // Fill the slots with content
+        clone.querySelector('slot[name="title"]').innerHTML = '<h2>This is the title</h2>';
+        clone.querySelector('slot[name="description"]').innerHTML = '<p>This is the description.</p>';
 
-        <!-- Section 5 -->
-        <div class="section" style="background-image: url('./images/bmw-lead.webp');">
-            <h2>Become a BMW expert</h2>
-            <a href="#">BMW Explained</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 BMW. All rights reserved.</p>
-    </footer>
+        // Append the clone to the content area
+        document.getElementById('content-area').appendChild(clone);
+    </script>
 
 </body>
 </html>
