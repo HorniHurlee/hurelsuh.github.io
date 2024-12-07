@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>HLTV.org - The home of competitive Counter-Strike</title>
+  <description>HLTV.org is the leading Counter-Strike site in the world, featuring news, demos, pictures, statistics, on-site coverage and much much more!</description>
+  <link>https://www.hltv.org/</link>
+  <language>en</language>
+  <ttl>60</ttl>
+  <image>
+    <url>https://www.hltv.org/img/static/openGraphHltvLogo.png</url>
+    <title>HLTV.org - The home of competitive Counter-Strike</title>
+    <link>https://www.hltv.org/</link>
+  </image>
+  <link xmlns="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="https://www.hltv.org/rss/news"></link>
+  <item>
+    <title>Short news: Week 49</title>
+    <description>Keep up with more Counter-Strike in bite-sized pieces.</description>
+    <link>https://www.hltv.org/news/40451/short-news-week-49</link>
+    <guid isPermaLink="false">hltvnews40451</guid>
+    <pubDate>Sat, 7 Dec 2024 14:52:00 GMT</pubDate>
+    <media:content url=""></media:content>
+  </item>
+  <item>
+    <title>HEROIC take on NAVI on final day of Elimination Stage</title>
+    <description>Five top 10 sides are fighting for the playoffs, with only three spots up for grabs.</description>
+    <link>https://www.hltv.org/news/40511/heroic-take-on-navi-on-final-day-of-elimination-stage</link>
+    <guid isPermaLink="false">hltvnews40511</guid>
+    <pubDate>Sat, 7 Dec 2024 13:42:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/cUeMdAnkgCiVWBWW5OpM3I.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=473&amp;q=75&amp;w=800&amp;s=9a69c3ade4f3ed478f0dfa30e0baa2b3"></media:content>
+  </item>
+  <item>
+    <title>donk lifts Spirit to Shanghai Major playoffs</title>
+    <description>The 17-year-old star was a force in the series against HEROIC with a 1.53 rating.</description>
+    <link>https://www.hltv.org/news/40512/donk-lifts-spirit-to-shanghai-major-playoffs</link>
+    <guid isPermaLink="false">hltvnews40512</guid>
+    <pubDate>Sat, 7 Dec 2024 13:08:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/C4qotmNyqLfjaNtGPDflIZ.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=474&amp;q=75&amp;w=800&amp;s=cc75991cad3aaf9df142169391c90d34"></media:content>
+  </item>
+  <item>
+    <title>FURIA eliminate paiN in Shanghai</title>
+    <description>FURIA proved their status as the best team in Brazil is well justified, with their added clutch factor helping them over the line.</description>
+    <link>https://www.hltv.org/news/40510/furia-eliminate-pain-in-shanghai</link>
+    <guid isPermaLink="false">hltvnews40510</guid>
+    <pubDate>Sat, 7 Dec 2024 12:40:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/Sf2hvSKGFA8UeSnlIG31hJ.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=473&amp;q=75&amp;w=800&amp;s=689da2af0feb1028fff93018e843086e"></media:content>
+  </item>
+  <item>
+    <title>Liquid through to Shanghai Major playoffs</title>
+    <description>Liquid won two maps thoroughly in the three-map series.</description>
+    <link>https://www.hltv.org/news/40508/liquid-through-to-shanghai-major-playoffs</link>
+    <guid isPermaLink="false">hltvnews40508</guid>
+    <pubDate>Sat, 7 Dec 2024 09:10:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/qdfiGpvvoFrKUT-jIduG6B.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=473&amp;q=75&amp;w=800&amp;s=a4fcaf2cc980ca561d4cd21fc4969ecd"></media:content>
+  </item>
+  <item>
+    <title>NAVI beat GamerLegion to enter 2-2 pool in Shanghai</title>
+    <description>The reigning Major champions are one win away from reaching the playoffs.</description>
+    <link>https://www.hltv.org/news/40506/navi-beat-gamerlegion-to-enter-2-2-pool-in-shanghai</link>
+    <guid isPermaLink="false">hltvnews40506</guid>
+    <pubDate>Sat, 7 Dec 2024 08:12:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/njhC6pS3rzQZcnJZyaczh2.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=474&amp;q=75&amp;w=800&amp;s=acf12d3980225d26a7bfd0957ab58d01"></media:content>
+  </item>
+  <item>
+    <title>MOUZ see off 3DMAX in Shanghai</title>
+    <description>siuhy's troops remain in the race for a playoff spot after a closely contested series.</description>
+    <link>https://www.hltv.org/news/40504/mouz-see-off-3dmax-in-shanghai</link>
+    <guid isPermaLink="false">hltvnews40504</guid>
+    <pubDate>Sat, 7 Dec 2024 05:55:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/qXAYxxKEor0v7L_pJTJSuw.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=474&amp;q=75&amp;w=800&amp;s=e3ef9f7972b4fd7fb0ad938afcf0df14"></media:content>
+  </item>
+  <item>
+    <title>G2 eviscerate FaZe to reach Shanghai Major playoffs</title>
+    <description>FaZe managed to rack up just seven rounds across the two maps played in this series.</description>
+    <link>https://www.hltv.org/news/40503/g2-eviscerate-faze-to-reach-shanghai-major-playoffs</link>
+    <guid isPermaLink="false">hltvnews40503</guid>
+    <pubDate>Sat, 7 Dec 2024 04:59:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/joNKtQ-4bZrWaK3RUCXqmQ.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=473&amp;q=75&amp;w=800&amp;s=3cc4011753c1a46bb8bf4b420db9a710"></media:content>
+  </item>
+  <item>
+    <title>Live updates from PW Shanghai Major day 7</title>
+    <description>Three more teams will lock in their spots in the playoffs today and three more will say goodbye to the Shanghai Major.</description>
+    <link>https://www.hltv.org/news/40502/live-updates-from-pw-shanghai-major-day-7</link>
+    <guid isPermaLink="false">hltvnews40502</guid>
+    <pubDate>Sat, 7 Dec 2024 02:01:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/qY5WFDKkoyz-UX0V8Q1zg_.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;m=%2Fm.png&amp;mw=107&amp;mx=20&amp;my=474&amp;q=75&amp;w=800&amp;s=51470a11a0c73af10eef8ed1a6c769b6"></media:content>
+  </item>
+  <item>
+    <title>cArn: &quot;There's a lot of exciting talent out there, so hopefully fnatic can build something stronger&quot;</title>
+    <description>fnatic's Chief Gaming Officer has said changes are on the horizon.</description>
+    <link>https://www.hltv.org/news/40501/carn-theres-a-lot-of-exciting-talent-out-there-so-hopefully-fnatic-can-build-something-stronger</link>
+    <guid isPermaLink="false">hltvnews40501</guid>
+    <pubDate>Fri, 6 Dec 2024 20:50:00 GMT</pubDate>
+    <media:content url="https://img-cdn.hltv.org/gallerypicture/O-1QDsfojI4nFz_Gel3DNb.jpg?auto=compress&amp;ixlib=java-2.1.0&amp;q=75&amp;w=800&amp;s=559b620612dd5fd3f16caae4f13a935f"></media:content>
+  </item>
+</channel>
+</rss>

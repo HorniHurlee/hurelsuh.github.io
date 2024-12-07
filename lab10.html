@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мэдээний сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav {
+            background-color: #16213e;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #0f3460;
+        }
+        .main-container {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .news-item {
+            background-color: #0f3460;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #333;
+            transition: transform 0.2s;
+        }
+        .news-item img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            cursor: pointer;
+        }
+        .news-item h3 a {
+            color: #ffd700;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .news-item h3 a:hover {
+            color: #ffa500;
+        }
+        .news-item p {
+            font-size: 0.9rem;
+            color: #d3d3d3;
+        }
+        .news-item small {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #a9a9a9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мэдээний сайт</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadRSS('hltv.rss')">HLTV</a></li>
+            <li><a href="#" onclick="loadRSS('https://rss.nytimes.com/services/xml/rss/nyt/Music.xml')">MUSIC</a></li>
+            <li><a href="#" onclick="loadRSS('https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml')">Technology</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="section-title">Today</div>
+        <div class="news-grid" id="news-container">
+            <p>Мэдээ ачаалж байна...</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Мэдээний сайт. Бүх эрх хуулиар хамгаалагдсан.
+    </footer>
+
+    <script>
+        function loadRSS(rssURL) {
+            const newsContainer = document.getElementById("news-container");
+            newsContainer.innerHTML = "<p>Мэдээ ачаалж байна...</p>";
+    
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", rssURL);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+    
+                    newsContainer.innerHTML = "";
+    
+                    const items = xmlDoc.getElementsByTagName("item");
+                    if (items.length === 0) {
+                        newsContainer.innerHTML = "<p>Мэдээ олдсонгүй.</p>";
+                        return;
+                    }
+    
+                    Array.from(items).forEach(item => {
+                        const title = item.querySelector("title")?.textContent || "Гарчиг алга";
+                        const link = item.querySelector("link")?.textContent || "#";
+                        const description = item.querySelector("description")?.textContent || "Тайлбар алга";
+                        const pubDate = item.querySelector("pubDate")?.textContent || "Огноо байхгүй";
+    
+                        // Fetch image from <media:content> tag
+                        let mediaContent = item.getElementsByTagName("media:content");
+                        let imageUrl = mediaContent?.[0]?.getAttribute("url");
+    
+                        // Use fallback image if no image found
+                        if (!imageUrl) {
+                            imageUrl = "../images/wdty.jpg"; // Use your local file as fallback
+                        }
+    
+                        // Create card element
+                        const newsItem = document.createElement("div");
+                        newsItem.classList.add("news-item");
+                        newsItem.innerHTML = `
+                            <a href="${link}" target="_blank">
+                                <img src="${imageUrl}" alt="${title}" onerror="this.src='weird_banana.png';">
+                            </a>
+                            <h3><a href="${link}" target="_blank">${title}</a></h3>
+                            <p>${description}</p>
+                            <small>${pubDate}</small>
+                        `;
+                        newsContainer.appendChild(newsItem);
+                    });
+                } else {
+                    console.error("RSS татахад алдаа гарлаа.");
+                    newsContainer.innerHTML = "<p>RSS өгөгдөл авахад алдаа гарлаа.</p>";
+                }
+            };
+            xhr.onerror = function () {
+                console.error("Хүсэлт илгээхэд алдаа гарлаа.");
+                newsContainer.innerHTML = "<p>Холболтын алдаа гарлаа.</p>";
+            };
+            xhr.send();
+        }
+    
+        // Load default RSS feed
+        loadRSS('hltv.rss');
+    </script>
+
+</body>
+</html>
