@@ -118,35 +118,32 @@ const questions = [
         level: 4
     },
 
-    // N5 (A,B,C,D)
+    // N5 (A,A,C,B)
     {
-        question: "図書館へ本をかえし............行きます。",
-        // Correct: に
-        options: ["に", "を", "へ", "で"],
+        question: "わたしは   きのう　おとうと ……. テニスを　しました。",
+        options: ["と","や", "を", "か"],
         correctAnswer: "A",
         level: 5
     },
     {
-        question: "子どものとき、私は毎日母に漢字の勉強............させられた。",
-        // Correct: を
-        options: ["に", "を", "が", "で"],
-        correctAnswer: "B",
+        question: "あたらしいコンピューターが …….です。",
+        options: ["ほしい","ありたい", "ほしいでした", "ありたくない"],
+        correctAnswer: "A",
         level: 5
     },
     {
-        question: "こんどの日曜日は出かけます、友だちのが............んです。",
-        // Correct: ある
-        options: ["あった", "あります", "ある", "行く"],
+        question: "おかあさんは …….でんしゃで来ますか。",
+        options: ["どれ", "どこ","どの", "どちら"],
         correctAnswer: "C",
         level: 5
-    },
+    }
     {
-        question: "ちょっとあついですね。まどを............もいいですか。",
-        // Correct: 開けて
-        options: ["開け", "開ける", "開けた", "開けて"],
-        correctAnswer: "D",
+        question: "きのう　えいがを…….から　どう　しましたか。"
+        options: ["見ます", "見て", "見", "見る"].
+        correctAnswer: "B",
         level: 5
-    },
+    }
+    
 ];
 //Creating the questions form
 const form = document.getElementById("testForm");
